@@ -1,12 +1,10 @@
-package gl_View;
+package com.gl.Library.com.gl.Library.View;
 
-import gl_Library.InputParser;
 
-import gl_Object.Customer;
-import gl_Object.Librarian;
-
-import gl_Service.LibraryService;
-
+import com.gl.Library.com.gl.Library.Class.Library.InputParser;
+import com.gl.Library.com.gl.Library.Class.Object.Customer;
+import com.gl.Library.com.gl.Library.Class.Object.Librarian;
+import com.gl.Library.com.gl.Library.Controller.Service.LibraryService;
 import java.util.Scanner;
 
 public class MainScreen {
@@ -44,12 +42,10 @@ public class MainScreen {
     // Librarian login
     public Librarian librarianDisplay() {
         String[] account = loginTemplate();
-
         LibraryService service = LibraryService.getInstance();
-
         Librarian loginLibrarian = null;
 
-        // id & password check
+        // id & password check service.getLibrariansService().getLibrarians()
         for (Librarian librarian : service.getLibrariansService().getLibrarians()) {
             if (librarian.getIdentity().equals(account[0])) {
                 if (librarian.getPassword().equals(account[1])) {
