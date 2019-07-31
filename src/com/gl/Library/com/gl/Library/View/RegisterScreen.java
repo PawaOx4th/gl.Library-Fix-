@@ -1,10 +1,11 @@
-package gl_View;
+package com.gl.Library.com.gl.Library.View;
 
-import gl_Library.InputParser;
-import gl_Library.Library;
-import gl_Object.Customer;
-import gl_Object.Librarian;
-import gl_Service.LibraryService;
+
+import com.gl.Library.com.gl.Library.Class.Library.InputParser;
+import com.gl.Library.com.gl.Library.Class.Library.Library;
+import com.gl.Library.com.gl.Library.Class.Object.Customer;
+import com.gl.Library.com.gl.Library.Class.Object.Librarian;
+import com.gl.Library.com.gl.Library.Controller.Service.LibraryService;
 
 import java.util.Scanner;
 import java.util.UUID;
