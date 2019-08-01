@@ -37,9 +37,6 @@ public class HistoryList {
         histories.getHistories().add(new History(UUID.randomUUID(), "Yotsuba", "Eli", "Arthur",
                 BookCategory.Magazine, "C0002", "Stan Lee", BookSituation.Borrow,
                 LocalDate.now(), LocalDate.now().plusDays(7)));
-        histories.getHistories().add(new History(UUID.randomUUID(), "Itsuki", "Honoka", "Doctor Strange",
-                BookCategory.Newspaper, "D0001", "Stan Lee", BookSituation.Borrow,
-                LocalDate.of(2019, 7, 4), LocalDate.of(2019, 7, 4).plusDays(7)));
 
     }
 

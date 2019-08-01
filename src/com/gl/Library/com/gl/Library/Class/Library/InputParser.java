@@ -13,12 +13,12 @@ public class InputParser {
     private static LibraryService service = LibraryService.getInstance();
     private static MainScreen mainScreen = new MainScreen();
 
-    public void controller() {
+    public static void controller() {
         // Property menu
         LibraryService service = LibraryService.getInstance();
         HomeScreen homeScreen = new HomeScreen();
         // Login section
-        switch (homeScreen.homeDisplay()) {
+        switch (HomeScreen.homeDisplay()) {
             case "1":
                 // Librarian login
                 String login = mainScreen.loginDisplay();
@@ -78,7 +78,7 @@ public class InputParser {
     }
 
     // Librarian login pass
-    public void adminLogin() {
+    public static void adminLogin() {
         System.out.println("================================");
         System.out.println("" + service.getLibrarianDetail().getFirstName() + " " + service.getLibrarianDetail().getLastName());
         service.setCustomerDetail(null);
@@ -92,22 +92,22 @@ public class InputParser {
                 LibraryScreen.removeBook();
                 break;
             case "3":
-                Library.searchBook();
+                LibraryScreen.searchBook();
                 break;
             case "4":
-                Library.checkBook();
+                LibraryScreen.checkBook(  );
                 break;
             case "5":
-                Library.historyBook();
+                LibraryScreen.historyBook();
                 break;
             case "6":
-                Library.sortBook();
+                LibraryScreen.sortBook();
                 break;
             case "7":
-                Library.confirmBook();
+                LibraryScreen.confirmShow();
                 break;
             case "8":
-                Library.changeBook();
+                LibraryScreen.changDate();
                 break;
             case "9":
                 service.setLibrarianDetail(null);
@@ -121,25 +121,25 @@ public class InputParser {
     }
 
     // Customer login pass
-    public void userLogin() {
+    public static void userLogin() {
         System.out.println("================================");
         System.out.println("" + service.getCustomerDetail().getFirstName() + " " + service.getCustomerDetail().getLastName());
         service.setLibrarianDetail(null);
         switch (mainScreen.customerMenu()) {
             case "1":
-                Library.searchBook();
+                LibraryScreen.searchBook();
                 break;
             case "2":
-                Library.checkBook();
+               LibraryScreen.checkBook(  );
                 break;
             case "3":
-                Library.borrowBook();
+                LibraryScreen.borrowBook();
                 break;
             case "4":
-                Library.returnBook();
+               LibraryScreen.returnBook();
                 break;
             case "5":
-                Library.changeBook();
+                LibraryScreen.changDate();
                 break;
             case "6":
                 service.setCustomerDetail(null);
@@ -153,7 +153,7 @@ public class InputParser {
     }
 
     // Registeration new account
-    public void register() {
+    public static void register() {
         System.out.println("================================");
         switch (RegisterScreen.registerMenu()) {
             case "1":
